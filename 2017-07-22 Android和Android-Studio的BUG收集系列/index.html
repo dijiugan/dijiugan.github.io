@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="bug,Android Studio," />
 
 
 
@@ -93,15 +93,18 @@
 
 
 
-<meta name="description" content="人情世故全不会，全靠第九感！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sense9">
-<meta property="og:url" content="https://dijiugan.github.io/archives/2017/07/index.html">
-<meta property="og:site_name" content="Sense9">
-<meta property="og:description" content="人情世故全不会，全靠第九感！">
+<meta name="description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏">
+<meta name="keywords" content="bug,Android Studio">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android和Android Studio的BUG收集系列">
+<meta property="og:url" content="https://dijiugan.github.io/2017-07-22 Android和Android-Studio的BUG收集系列/index.html">
+<meta property="og:site_name" content="第九感">
+<meta property="og:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-07-22T05:58:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sense9">
-<meta name="twitter:description" content="人情世故全不会，全靠第九感！">
+<meta name="twitter:title" content="Android和Android Studio的BUG收集系列">
+<meta name="twitter:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏">
 
 
 
@@ -129,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="https://dijiugan.github.io/archives/2017/07/"/>
+  <link rel="canonical" href="https://dijiugan.github.io/2017-07-22 Android和Android-Studio的BUG收集系列/"/>
 
 
 
 
 
-  <title>归档 | Sense9</title>
+  <title>Android和Android Studio的BUG收集系列 | 第九感</title>
   
 
 
@@ -160,7 +163,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -171,7 +174,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Sense9</span>
+        <span class="site-title">第九感</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -244,66 +247,177 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 1 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="https://dijiugan.github.io/2017-07-22 Android和Android-Studio的BUG收集系列/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="第九感">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="第九感">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Android和Android Studio的BUG收集系列</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-22T13:58:55+08:00">
+                2017-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/BUG/" itemprop="url" rel="index">
+                    <span itemprop="name">BUG</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <blockquote>
+<p>这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…</p>
+</blockquote>
+<ol>
+<li>在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏</li>
+</ol>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bug/" rel="tag"># bug</a>
+          
+            <a href="/tags/Android-Studio/" rel="tag"># Android Studio</a>
+          
         </div>
       
+
+      
+      
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017-07-07 hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          <span class="post-nav-divider"></span>
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/07/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-07T19:07:53+08:00"
-              content="2017-07-07" >
-          07-07
-        </time>
-      </div>
-
-    </header>
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -311,6 +425,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -335,8 +453,8 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
-               alt="Sense9" />
-          <p class="site-author-name" itemprop="name">Sense9</p>
+               alt="第九感" />
+          <p class="site-author-name" itemprop="name">第九感</p>
            
               <p class="site-description motion-element" itemprop="description">人情世故全不会，全靠第九感！</p>
           
@@ -346,14 +464,32 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              
+            </div>
           
 
         </nav>
@@ -396,7 +532,7 @@
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Sense9</span>
+  <span class="author" itemprop="copyrightHolder">第九感</span>
 </div>
 
 
@@ -495,11 +631,9 @@
 
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   
