@@ -93,18 +93,20 @@
 
 
 
-<meta name="description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏">
+<meta name="description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏 以下错误及解决方法  12Error:Execution failed for task &apos;:app_new">
 <meta name="keywords" content="bug,Android Studio">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android和Android Studio的BUG收集系列">
 <meta property="og:url" content="https://dijiugan.github.io/2017-07-22-Android和Android-Studio的BUG收集系列/index.html">
 <meta property="og:site_name" content="第九感">
-<meta property="og:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏">
+<meta property="og:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏 以下错误及解决方法  12Error:Execution failed for task &apos;:app_new">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-22T05:58:55.000Z">
+<meta property="og:image" content="https://dijiugan.github.io/Users/cairongjiu/Desktop/sense9/source/img/bug-2.png">
+<meta property="og:updated_time" content="2017-07-27T08:43:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android和Android Studio的BUG收集系列">
-<meta name="twitter:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏">
+<meta name="twitter:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…   在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏 以下错误及解决方法  12Error:Execution failed for task &apos;:app_new">
+<meta name="twitter:image" content="https://dijiugan.github.io/Users/cairongjiu/Desktop/sense9/source/img/bug-2.png">
 
 
 
@@ -348,7 +350,10 @@
 </blockquote>
 <ol>
 <li>在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏</li>
+<li>以下错误及解决方法</li>
 </ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Error:Execution failed <span class="keyword">for</span> task <span class="string">':app_newsdk_test:transformClassesAndResourcesWithProguardForRelease'</span>.</div><div class="line">&gt; Job failed, see logs <span class="keyword">for</span> details</div></pre></td></tr></table></figure>
+<p><img src="/Users/cairongjiu/Desktop/sense9/source/img/bug-2.png" alt="问题2解决方法"></p>
 
       
     </div>
@@ -393,15 +398,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017-07-07-hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017-07-23-Android-之学习巩固篇/" rel="prev" title="Android 之学习篇">
+                Android 之学习篇 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -464,7 +469,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -475,7 +480,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -486,7 +491,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
