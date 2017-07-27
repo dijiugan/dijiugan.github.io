@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="简介AIDL（Android Interface description language，Android 接口描述语言）,定义客户端与服务使用进程间通信 (IPC) 进行相互通信时都认可的编程接口。 定义AIDL接口1. 创建.aidl文件在.aidl文件中定义带有方法签名的编程接口。 12345package com.example.aidl;//aidl文件所在的单独的包名interface">
+<meta name="description" content="简介AIDL（Android Interface description language，Android 接口描述语言）,定义客户端与服务使用进程间通信 (IPC) 进行相互通信时都认可的编程接口。">
 <meta name="keywords" content="AIDL,IPC机制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AIDL跨应用程序通信">
 <meta property="og:url" content="https://dijiugan.github.io/2017-07-27-AIDL跨应用程序通信/index.html">
 <meta property="og:site_name" content="第九感">
-<meta property="og:description" content="简介AIDL（Android Interface description language，Android 接口描述语言）,定义客户端与服务使用进程间通信 (IPC) 进行相互通信时都认可的编程接口。 定义AIDL接口1. 创建.aidl文件在.aidl文件中定义带有方法签名的编程接口。 12345package com.example.aidl;//aidl文件所在的单独的包名interface">
+<meta property="og:description" content="简介AIDL（Android Interface description language，Android 接口描述语言）,定义客户端与服务使用进程间通信 (IPC) 进行相互通信时都认可的编程接口。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-27T08:40:46.000Z">
+<meta property="og:updated_time" content="2017-07-27T08:57:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AIDL跨应用程序通信">
-<meta name="twitter:description" content="简介AIDL（Android Interface description language，Android 接口描述语言）,定义客户端与服务使用进程间通信 (IPC) 进行相互通信时都认可的编程接口。 定义AIDL接口1. 创建.aidl文件在.aidl文件中定义带有方法签名的编程接口。 12345package com.example.aidl;//aidl文件所在的单独的包名interface">
+<meta name="twitter:description" content="简介AIDL（Android Interface description language，Android 接口描述语言）,定义客户端与服务使用进程间通信 (IPC) 进行相互通信时都认可的编程接口。">
 
 
 
@@ -344,6 +344,7 @@
 
       
         <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>AIDL（Android Interface description language，Android 接口描述语言）,定义客户端与服务使用进程间通信 (IPC) 进行相互通信时都认可的编程接口。</p>
+<a id="more"></a>
 <h1 id="定义AIDL接口"><a href="#定义AIDL接口" class="headerlink" title="定义AIDL接口"></a>定义AIDL接口</h1><h2 id="1-创建-aidl文件"><a href="#1-创建-aidl文件" class="headerlink" title="1. 创建.aidl文件"></a>1. 创建.aidl文件</h2><p>在.aidl文件中定义带有方法签名的编程接口。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.example.aidl;<span class="comment">//aidl文件所在的单独的包名</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MyRemoteService</span> </span>&#123;</div><div class="line">	<span class="function">String <span class="title">getString</span><span class="params">(<span class="keyword">int</span> flag)</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>补充：默认情况下，AIDL 支持下列数据类型：</p>
@@ -385,6 +386,8 @@
 <li>建立一个.aidl文件声明你的parcelable类</li>
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.appcloud.remote;</div><div class="line"></div><div class="line">parcelable VersionInfo;</div></pre></td></tr></table></figure>
+<p>参考：<a href="https://developer.android.google.cn/guide/components/aidl.html" target="_blank" rel="external">AIDL 官网介绍</a></p>
+
       
     </div>
 
