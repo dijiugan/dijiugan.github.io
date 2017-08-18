@@ -102,8 +102,8 @@
 <meta property="og:description" content="仅以此篇文章致敬逝去的JM影帝   简介 greenDAO：一款基于ORM的Android数据库解决方案。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://greenrobot.org/wordpress/wp-content/uploads/greenDAO-orm-320.png">
-<meta property="og:image" content="https://dijiugan.github.io/Users/cairongjiu/Code/DiJiuGan/dijiugan/source/images/greenDao.png">
-<meta property="og:updated_time" content="2017-08-18T03:44:18.000Z">
+<meta property="og:image" content="http://ouv3xsnoc.bkt.clouddn.com/make_project.png">
+<meta property="og:updated_time" content="2017-08-18T06:20:12.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="greenDAO 初探">
 <meta name="twitter:description" content="仅以此篇文章致敬逝去的JM影帝   简介 greenDAO：一款基于ORM的Android数据库解决方案。">
@@ -371,7 +371,7 @@
 <h3 id="Make-Project"><a href="#Make-Project" class="headerlink" title="Make Project"></a>Make Project</h3><ul>
 <li>创建完实体类后点击 Build–Make Project ，实体类会自动编译，生成getter和setter方法并且会在指定目录下（com.startnet.greendao）生成三个文件</li>
 </ul>
-<p><img src="/Users/cairongjiu/Code/DiJiuGan/dijiugan/source/images/greenDao.png" alt=""></p>
+<p><img src="http://ouv3xsnoc.bkt.clouddn.com/make_project.png" alt="Make Projeclt结果"></p>
 <h3 id="Application-初始化"><a href="#Application-初始化" class="headerlink" title="Application 初始化"></a>Application 初始化</h3><ol>
 <li><p>创建MyApplication并继承自系统的Application类进行初始化配置</p>
  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyApplication</span> <span class="keyword">extends</span> <span class="title">Application</span> </span>&#123;</div><div class="line">	<span class="comment">//声明一个DaoSession</span></div><div class="line">    <span class="keyword">private</span> DaoSession daoSession;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.onCreate();</div><div class="line">		<span class="comment">//创建一个名为music-db的数据库</span></div><div class="line">        DaoMaster.DevOpenHelper helper = <span class="keyword">new</span> DaoMaster.DevOpenHelper(getApplicationContext(), <span class="string">"music-db"</span>,<span class="keyword">null</span>);</div><div class="line">        SQLiteDatabase db = helper.getWritableDatabase() ;</div><div class="line"></div><div class="line">        daoSession = <span class="keyword">new</span> DaoMaster(db).newSession();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> DaoSession <span class="title">getDaoSession</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> daoSession;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
