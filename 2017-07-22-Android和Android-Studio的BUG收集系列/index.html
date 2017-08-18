@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="第九感">
 <meta property="og:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-07-27T08:55:39.000Z">
+<meta property="og:updated_time" content="2017-08-07T11:25:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android和Android Studio的BUG收集系列">
 <meta name="twitter:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…">
@@ -349,10 +349,28 @@
 <a id="more"></a>
 <ol>
 <li>在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏</li>
-<li>以下错误及解决方法</li>
+<li><p>以下错误及解决方法</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Error:Execution failed <span class="keyword">for</span> task <span class="string">':app_newsdk_test:transformClassesAndResourcesWithProguardForRelease'</span>.</div><div class="line">&gt; Job failed, see logs <span class="keyword">for</span> details</div></pre></td></tr></table></figure>
+</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Error:Execution failed <span class="keyword">for</span> task <span class="string">':app_newsdk_test:transformClassesAndResourcesWithProguardForRelease'</span>.</div><div class="line">&gt; Job failed, see logs <span class="keyword">for</span> details</div></pre></td></tr></table></figure>
 
+<ol>
+<li>RatingBar 的高应使用<code>wrap_content</code>,否则将容易拉升像素</li>
+<li><p>..</p>
+<ul>
+<li><p>问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">	</div></pre></td></tr></table></figure>
+</li>
+<li><p>解决</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">compile</span>(<span class="string">'com.android.support:recyclerview-v7:25.1.0'</span>) &#123;</div><div class="line">       <span class="keyword">exclude</span> <span class="keyword">group</span>: <span class="string">'com.android.support'</span></div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>在所有的可滚动的View中添加以下属性，可以去除阻尼</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android:overScrollMode="never"</div></pre></td></tr></table></figure></li>
+</ol>
 
       
     </div>
