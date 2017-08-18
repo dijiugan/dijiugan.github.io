@@ -103,7 +103,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://greenrobot.org/wordpress/wp-content/uploads/greenDAO-orm-320.png">
 <meta property="og:image" content="https://dijiugan.github.io/Users/cairongjiu/Code/DiJiuGan/dijiugan/source/images/greenDao.png">
-<meta property="og:updated_time" content="2017-08-18T03:28:03.000Z">
+<meta property="og:updated_time" content="2017-08-18T03:44:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="greenDAO 初探">
 <meta name="twitter:description" content="仅以此篇文章致敬逝去的JM影帝   简介 greenDAO：一款基于ORM的Android数据库解决方案。">
@@ -348,7 +348,7 @@
 </ul>
 <h3 id="创建实体类"><a href="#创建实体类" class="headerlink" title="创建实体类"></a>创建实体类</h3><ol>
 <li><p>笔者学习greenDAO时正在写一个音乐播放器，所以创建了一个音乐信息实体类，如下：</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@(Android)Entity</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MusicInfoEntity</span> </span>&#123;</div><div class="line">    <span class="meta">@Id</span></div><div class="line">    <span class="keyword">private</span> Long id;<span class="comment">//id的类型请一定选择Long</span></div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="keyword">private</span> String musicName;</div><div class="line">    <span class="keyword">private</span> String musicSinger;</div><div class="line">    <span class="keyword">private</span> String musicAlbum;</div><div class="line">    <span class="keyword">private</span> String musicSize;</div><div class="line">    <span class="keyword">private</span> String musicAddress;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Entity</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MusicInfoEntity</span> </span>&#123;</div><div class="line">    <span class="meta">@Id</span></div><div class="line">    <span class="keyword">private</span> Long id;<span class="comment">//id的类型请一定选择Long</span></div><div class="line">    <span class="meta">@NotNull</span></div><div class="line">    <span class="keyword">private</span> String musicName;</div><div class="line">    <span class="keyword">private</span> String musicSinger;</div><div class="line">    <span class="keyword">private</span> String musicAlbum;</div><div class="line">    <span class="keyword">private</span> String musicSize;</div><div class="line">    <span class="keyword">private</span> String musicAddress;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
 <p>2 .  greendao中的注解含义</p>
