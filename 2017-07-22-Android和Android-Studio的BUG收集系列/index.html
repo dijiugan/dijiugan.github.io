@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="第九感">
 <meta property="og:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-18T04:48:38.000Z">
+<meta property="og:updated_time" content="2017-08-22T07:40:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android和Android Studio的BUG收集系列">
 <meta name="twitter:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…">
@@ -374,8 +374,13 @@
 </li>
 </ol>
 <ol>
-<li><p>使用了<code>subList（)</code></p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.util.ConcurrentModificationException</div></pre></td></tr></table></figure></li>
+<li><p>在使用DragAndDrop时遇到以下错误的原因及解决方法</p>
+<ul>
+<li>使用了<code>subList（)</code>，方法：不用了</li>
+<li><p><a href="https://stackoverflow.com/questions/10988671/java-util-concurrentmodificationexception-in-view-setvisibility" target="_blank" rel="external">https://stackoverflow.com/questions/10988671/java-util-concurrentmodificationexception-in-view-setvisibility</a></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.util.ConcurrentModificationException</div></pre></td></tr></table></figure></li>
+</ul>
+</li>
 </ol>
 
       
@@ -484,7 +489,7 @@
                alt="第九感" />
           <p class="site-author-name" itemprop="name">第九感</p>
            
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">NullGirlFriendException</p>
           
         </div>
         <nav class="site-state motion-element">
