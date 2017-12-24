@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="第九感">
 <meta property="og:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-22T07:40:20.000Z">
+<meta property="og:updated_time" content="2017-11-01T08:09:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android和Android Studio的BUG收集系列">
 <meta name="twitter:description" content="这是笔者在做Android开发和使用AndroidStudio这个工具的时候遇到的一些BUG和异常收集，以免再次碰到时方便查询。持续更新…">
@@ -350,25 +350,10 @@
 <ol>
 <li>在使用ProgressBar、Dialog、PopupWindow等时一定在Activity之间跳转时一定要dismiss，不然容易造成内存泄漏</li>
 <li><p>以下错误及解决方法</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Error:Execution failed <span class="keyword">for</span> task <span class="string">':app_newsdk_test:transformClassesAndResourcesWithProguardForRelease'</span>.</div><div class="line">&gt; Job failed, see logs <span class="keyword">for</span> details</div></pre></td></tr></table></figure>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Error:Execution failed <span class="keyword">for</span> task <span class="string">':app_newsdk_test:transformClassesAndResourcesWithProguardForRelease'</span>.</div><div class="line">&gt; Job failed, see logs <span class="keyword">for</span> details</div><div class="line">&#123;% images bug-<span class="number">2</span>.png BUG2 解决方法 %&#125;</div></pre></td></tr></table></figure>
 </li>
-</ol>
-
-<ol>
-<li><p>RatingBar 的高应使用<code>wrap_content</code>,否则将容易拉升像素</p>
+<li><p>RatingBar 的高应使用<code>wrap_content</code>,否则将容易拉升像素    </p>
 </li>
-<li><p>..</p>
-<ul>
-<li><p>问题</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">	</div></pre></td></tr></table></figure>
-</li>
-<li><p>解决</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">compile</span>(<span class="string">'com.android.support:recyclerview-v7:25.1.0'</span>) &#123;</div><div class="line">       <span class="keyword">exclude</span> <span class="keyword">group</span>: <span class="string">'com.android.support'</span></div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<ol>
 <li><p>在所有的可滚动的View中添加以下属性，可以去除阻尼</p>
  <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">android:overScrollMode="never"</div></pre></td></tr></table></figure>
 </li>
@@ -376,13 +361,20 @@
 <ol>
 <li><p>在使用DragAndDrop时遇到以下错误的原因及解决方法</p>
 <ul>
-<li>使用了<code>subList（)</code>，方法：不用了</li>
-<li><p><a href="https://stackoverflow.com/questions/10988671/java-util-concurrentmodificationexception-in-view-setvisibility" target="_blank" rel="external">https://stackoverflow.com/questions/10988671/java-util-concurrentmodificationexception-in-view-setvisibility</a></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.util.ConcurrentModificationException</div></pre></td></tr></table></figure></li>
+<li><p>错误</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java.util.ConcurrentModificationException</div></pre></td></tr></table></figure>
+</li>
+<li><p>原因：使用了<code>subList（)</code>，解决</p>
+</li>
+<li>方法：不用了（吐血），<a href="https://stackoverflow.com/questions/10988671/java-util-concurrentmodificationexception-in-view-setvisibility" target="_blank" rel="external">参考</a></li>
 </ul>
 </li>
+<li><p>编译BasicRxJavaSample时遇到的问题</p>
+ <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Error:(19, 0) Gradle DSL method not found: 'google()'</div><div class="line">Possible causes:&lt;ul&gt;&lt;li&gt;The project 'BasicRxJavaSample' may be using a version of the Android Gradle plug-in that does not contain the method (e.g. 'testCompile' was added in 1.1.0).</div><div class="line">&lt;a href="fixGradleElements"&gt;Upgrade plugin to version 2.3.3 and sync project&lt;/a&gt;&lt;/li&gt;&lt;li&gt;The project 'BasicRxJavaSample' may be using a version of Gradle that does not contain the method.</div><div class="line">&lt;a href="open.wrapper.file"&gt;Open Gradle wrapper file&lt;/a&gt;&lt;/li&gt;&lt;li&gt;The build file may be missing a Gradle plugin.</div><div class="line">&lt;a href="apply.gradle.plugin"&gt;Apply Gradle plugin&lt;/a&gt;&lt;/li&gt;</div></pre></td></tr></table></figure>
+</li>
 </ol>
-
+<pre><code>- 解决方法：适用AndroidStudio 版本3.0以上。
+</code></pre>
       
     </div>
 
@@ -497,7 +489,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -508,7 +500,7 @@
             
             <div class="site-state-item site-state-categories">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               
             </div>
@@ -519,7 +511,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               
             </div>
@@ -615,6 +607,8 @@
   
 
 
+  
+
 
 
 
@@ -642,6 +636,9 @@
 
   
   <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
 
   
