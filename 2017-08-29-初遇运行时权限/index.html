@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="简单介绍概述为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。 权限分类 普通权限：系统自动授权 危险权限 会触及用户隐私，Android 6.0以后需在运行时申请。 危险权限总共9组24个。查看所有的危险权限和普通权限 当属于某组的某个权限获得授权时，该组的所有权限都会获得授权    申请运行时权限">
+<meta name="description" content="成年以来一直睡不够–《自然醒》林宥嘉 简单介绍概述 为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。 权限分类 普通权限：系统自动授权 危险权限 会触及用户隐私，Android 6.0以后需在运行时申请。 危险权限总共9组24个。查看所有的危险权限和普通权限 当属于某组的某个权限获得授权时，该组的">
 <meta name="keywords" content="Permissions,Android 6.0">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初遇运行时权限与RxPermissions">
 <meta property="og:url" content="https://dijiugan.github.io/2017-08-29-初遇运行时权限/index.html">
 <meta property="og:site_name" content="第九感">
-<meta property="og:description" content="简单介绍概述为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。 权限分类 普通权限：系统自动授权 危险权限 会触及用户隐私，Android 6.0以后需在运行时申请。 危险权限总共9组24个。查看所有的危险权限和普通权限 当属于某组的某个权限获得授权时，该组的所有权限都会获得授权    申请运行时权限">
+<meta property="og:description" content="成年以来一直睡不够–《自然醒》林宥嘉 简单介绍概述 为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。 权限分类 普通权限：系统自动授权 危险权限 会触及用户隐私，Android 6.0以后需在运行时申请。 危险权限总共9组24个。查看所有的危险权限和普通权限 当属于某组的某个权限获得授权时，该组的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-25T12:19:16.862Z">
+<meta property="og:updated_time" content="2017-12-25T12:25:12.922Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初遇运行时权限与RxPermissions">
-<meta name="twitter:description" content="简单介绍概述为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。 权限分类 普通权限：系统自动授权 危险权限 会触及用户隐私，Android 6.0以后需在运行时申请。 危险权限总共9组24个。查看所有的危险权限和普通权限 当属于某组的某个权限获得授权时，该组的所有权限都会获得授权    申请运行时权限">
+<meta name="twitter:description" content="成年以来一直睡不够–《自然醒》林宥嘉 简单介绍概述 为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。 权限分类 普通权限：系统自动授权 危险权限 会触及用户隐私，Android 6.0以后需在运行时申请。 危险权限总共9组24个。查看所有的危险权限和普通权限 当属于某组的某个权限获得授权时，该组的">
 
 
 
@@ -373,7 +373,10 @@
       
 
       
-        <h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。</p>
+        <blockquote>
+<p>成年以来一直睡不够<br>–《自然醒》林宥嘉</p>
+<h1 id="简单介绍"><a href="#简单介绍" class="headerlink" title="简单介绍"></a>简单介绍</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2></blockquote>
+<p>为了增加Android应用的安全性和保障用户的隐私权，自Android 6.0（及Android M，API 23）起将权限分为普通权限和危险权限。</p>
 <h2 id="权限分类"><a href="#权限分类" class="headerlink" title="权限分类"></a>权限分类</h2><ol>
 <li>普通权限：系统自动授权</li>
 <li>危险权限<ul>
@@ -383,6 +386,7 @@
 </ul>
 </li>
 </ol>
+<a id="more"></a>
 <h1 id="申请运行时权限"><a href="#申请运行时权限" class="headerlink" title="申请运行时权限"></a>申请运行时权限</h1><h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>在<code>AndroidManifest.xml</code>中声明所需的危险权限。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">"android.permission.READ_CONTACTS"</span>/&gt;</span></div></pre></td></tr></table></figure>
 <h2 id="运行时申请"><a href="#运行时申请" class="headerlink" title="运行时申请"></a>运行时申请</h2><p>所谓运行时申请即在代码中申请，通过调用<code>ContextCompat.checkSelfPermission()</code>方法判断危险权限是否已经被授权，如果没有，则调用<code>ActivityCompat.requestPermissions()</code>提出申请。</p>
