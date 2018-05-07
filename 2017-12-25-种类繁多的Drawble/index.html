@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="冰河消失连你也无声无息人世间太多太多不确定by 摇滚怎么了 –王力宏  简介 概念：Drawable是一种可以在Canvas上进行绘制的抽象的概念。 作用：Drawable通常用来作为View的背景或ImageView的src属性使用。一般来说，Drawable没有大小的概念，会被拉伸至View的大小（实际上也可以设置）。  BitmapDrawable简介可以是一张原始的图片，也可以是一个引入">
+<meta name="description" content="冰河消失连你也无声无息人世间太多太多不确定by 摇滚怎么了 –王力宏  简介 概念：Drawable是一种可以在Canvas上进行绘制的抽象的概念。 作用：Drawable通常用来作为View的背景或ImageView的src属性使用。一般来说，Drawable没有大小的概念，会被拉伸至View的大小（实际上也可以设置）。">
 <meta name="keywords" content="Drawble">
 <meta property="og:type" content="article">
 <meta property="og:title" content="种类繁多的Drawble">
 <meta property="og:url" content="https://dijiugan.github.io/2017-12-25-种类繁多的Drawble/index.html">
 <meta property="og:site_name" content="木乃伊">
-<meta property="og:description" content="冰河消失连你也无声无息人世间太多太多不确定by 摇滚怎么了 –王力宏  简介 概念：Drawable是一种可以在Canvas上进行绘制的抽象的概念。 作用：Drawable通常用来作为View的背景或ImageView的src属性使用。一般来说，Drawable没有大小的概念，会被拉伸至View的大小（实际上也可以设置）。  BitmapDrawable简介可以是一张原始的图片，也可以是一个引入">
+<meta property="og:description" content="冰河消失连你也无声无息人世间太多太多不确定by 摇滚怎么了 –王力宏  简介 概念：Drawable是一种可以在Canvas上进行绘制的抽象的概念。 作用：Drawable通常用来作为View的背景或ImageView的src属性使用。一般来说，Drawable没有大小的概念，会被拉伸至View的大小（实际上也可以设置）。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-06T08:19:41.221Z">
+<meta property="og:updated_time" content="2018-05-07T01:35:22.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="种类繁多的Drawble">
-<meta name="twitter:description" content="冰河消失连你也无声无息人世间太多太多不确定by 摇滚怎么了 –王力宏  简介 概念：Drawable是一种可以在Canvas上进行绘制的抽象的概念。 作用：Drawable通常用来作为View的背景或ImageView的src属性使用。一般来说，Drawable没有大小的概念，会被拉伸至View的大小（实际上也可以设置）。  BitmapDrawable简介可以是一张原始的图片，也可以是一个引入">
+<meta name="twitter:description" content="冰河消失连你也无声无息人世间太多太多不确定by 摇滚怎么了 –王力宏  简介 概念：Drawable是一种可以在Canvas上进行绘制的抽象的概念。 作用：Drawable通常用来作为View的背景或ImageView的src属性使用。一般来说，Drawable没有大小的概念，会被拉伸至View的大小（实际上也可以设置）。">
 
 
 
@@ -380,6 +380,7 @@
 <li>概念：<code>Drawable</code>是一种可以在<code>Canvas</code>上进行绘制的抽象的概念。</li>
 <li>作用：<code>Drawable</code>通常用来作为View的背景或<code>ImageView</code>的<code>src</code>属性使用。一般来说，<code>Drawable</code>没有大小的概念，会被拉伸至<code>View</code>的大小（实际上也可以设置）。</li>
 </ul>
+<a id="more"></a>
 <h2 id="BitmapDrawable"><a href="#BitmapDrawable" class="headerlink" title="BitmapDrawable"></a>BitmapDrawable</h2><h3 id="简介-1"><a href="#简介-1" class="headerlink" title="简介"></a>简介</h3><p>可以是一张原始的图片，也可以是一个引入来图片的<code>xml</code>，在<code>xml</code>中可以对图片进行配置</p>
 <h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!-- 图片的资源ID --&gt;</span></div><div class="line">android:src="@drawable/drawable_icon"</div><div class="line"><span class="comment">&lt;!-- 透明度 --&gt;</span></div><div class="line">android:alpha="100"</div><div class="line"><span class="comment">&lt;!-- 是否开启抗锯齿 --&gt;</span></div><div class="line">android:antialias="true" </div><div class="line"><span class="comment">&lt;!-- 是否开启抖动效果 --&gt;</span></div><div class="line">android:dither="true" </div><div class="line"><span class="comment">&lt;!-- 开启可以在图片拉伸或压缩时保持好的显示效果 --&gt;</span></div><div class="line">android:filter="true" </div><div class="line"><span class="comment">&lt;!-- 当图片小于容器当尺寸时，该图片的定位 --&gt;</span></div><div class="line">android:gravity="top|left" </div><div class="line"> </div><div class="line"><span class="comment">&lt;!-- 平铺模式：开启时，gravity会失效 --&gt;</span></div><div class="line">android:tileMode="clamp" </div><div class="line">android:tileModeX="disabled" </div><div class="line">android:tileModeY="clamp" </div><div class="line">android:tint="@color/colorAccent" </div><div class="line">android:tintMode="add"</div><div class="line">android:autoMirrored="true"</div><div class="line"><span class="comment">&lt;!-- 纹理映射 不常用，可以忽略，默认为false --&gt;</span></div><div class="line">android:mipMap="false"</div></pre></td></tr></table></figure>
 <h3 id="部分属性详解"><a href="#部分属性详解" class="headerlink" title="部分属性详解"></a>部分属性详解</h3><ol>
@@ -572,7 +573,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
