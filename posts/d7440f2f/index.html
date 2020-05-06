@@ -96,23 +96,34 @@
 
 
 
-  <meta name="description" content="新的生活新的开始">
-<meta property="og:type" content="website">
-<meta property="og:title" content="木乃伊">
-<meta property="og:url" content="https://mny459.gitee.io/page/2/index.html">
+  <meta name="description" content="#1. 网络基础知识  IP地址：每台计算机的唯一标示，类似于手机号码。目前使用较多的是IPv4,定义了IP地址的长度为32位的二进制。 协议：TCP/IP是目前世界上应用最为广泛的协议；是以TCP和IP为基础的不同层次上多个协议的集合 。 TCP：Transmission Control Protocol  传输控制协议 IP：Internet Protocol  互联网协议 TCP/IP模型：">
+<meta name="keywords" content="JAVA网络,Socket">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA 网络编程之Socket">
+<meta property="og:url" content="https://mny459.gitee.io/posts/d7440f2f/index.html">
 <meta property="og:site_name" content="木乃伊">
-<meta property="og:description" content="新的生活新的开始">
+<meta property="og:description" content="#1. 网络基础知识  IP地址：每台计算机的唯一标示，类似于手机号码。目前使用较多的是IPv4,定义了IP地址的长度为32位的二进制。 协议：TCP/IP是目前世界上应用最为广泛的协议；是以TCP和IP为基础的不同层次上多个协议的集合 。 TCP：Transmission Control Protocol  传输控制协议 IP：Internet Protocol  互联网协议 TCP/IP模型：">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/Screenshot_2016-08-11-09-38-12.png">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/1470882428600.png">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/1470882465748.png">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/Screenshot_2016-08-11-10-47-13.png">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/1470887815182.png">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/Screenshot_2016-08-12-11-20-38.png">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/1470974857834.png">
+<meta property="og:image" content="https://mny459.gitee.io/posts/d7440f2f/Screenshot_2016-08-12-11-59-19.png">
+<meta property="og:updated_time" content="2019-04-10T14:04:50.795Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="木乃伊">
-<meta name="twitter:description" content="新的生活新的开始">
+<meta name="twitter:title" content="JAVA 网络编程之Socket">
+<meta name="twitter:description" content="#1. 网络基础知识  IP地址：每台计算机的唯一标示，类似于手机号码。目前使用较多的是IPv4,定义了IP地址的长度为32位的二进制。 协议：TCP/IP是目前世界上应用最为广泛的协议；是以TCP和IP为基础的不同层次上多个协议的集合 。 TCP：Transmission Control Protocol  传输控制协议 IP：Internet Protocol  互联网协议 TCP/IP模型：">
+<meta name="twitter:image" content="https://mny459.gitee.io/posts/d7440f2f/Screenshot_2016-08-11-09-38-12.png">
 
 
 
 
 
 
-  <link rel="canonical" href="https://mny459.gitee.io/page/2/">
+  <link rel="canonical" href="https://mny459.gitee.io/posts/d7440f2f/">
 
 
 
@@ -122,7 +133,7 @@
   };
 </script>
 
-  <title>木乃伊</title>
+  <title>JAVA 网络编程之Socket | 木乃伊</title>
   
 
 
@@ -170,8 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -343,529 +353,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://mny459.gitee.io/mny459/posts/2d5d09c5/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="木乃伊459">
-      <meta itemprop="description" content="新的生活新的开始">
-      <meta itemprop="image" content="/mny459/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木乃伊">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/mny459/posts/2d5d09c5/" class="post-title-link" itemprop="url">值得关注的Github项目</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-31 17:23:59" itemprop="dateCreated datePublished" datetime="2018-08-31T17:23:59+08:00">2018-08-31</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-10 22:04:50" itemprop="dateModified" datetime="2019-04-10T22:04:50+08:00">2019-04-10</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="知识总结"><a href="#知识总结" class="headerlink" title="知识总结"></a>知识总结</h2><ol>
-<li><a href="https://github.com/mzlogin/awesome-adb" target="_blank" rel="noopener">ADB 使用</a></li>
-<li><a href="https://github.com/OCNYang/Android-Animation-Set" target="_blank" rel="noopener">Android 动画总结</a></li>
-<li><a href="https://github.com/iluwatar/java-design-patterns" target="_blank" rel="noopener">java-design-patterns</a></li>
-<li><a href="https://github.com/doggycoder/AndroidOpenGLDemo" target="_blank" rel="noopener">AndroidOpenGLDemo</a></li>
-<li><a href="https://github.com/simplezhli/AndroidUT" target="_blank" rel="noopener">Android 单元测试</a></li>
-<li><a href="https://github.com/francistao/LearningNotes" target="_blank" rel="noopener">学习笔记</a></li>
-<li><a href="https://github.com/CymChad/CymChad.github.io" target="_blank" rel="noopener">RecyclerView</a></li>
-<li><a href="https://github.com/Blankj/AndroidStandardDevelop" target="_blank" rel="noopener">AndroidStandardDevelop</a></li>
-<li><a href="https://github.com/Luosunce/material-design-data" target="_blank" rel="noopener">material-design-data</a></li>
-</ol>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/mny459/posts/2d5d09c5/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://mny459.gitee.io/mny459/posts/63601/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="木乃伊459">
-      <meta itemprop="description" content="新的生活新的开始">
-      <meta itemprop="image" content="/mny459/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木乃伊">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/mny459/posts/63601/" class="post-title-link" itemprop="url">写作工具</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-26 23:18:25" itemprop="dateCreated datePublished" datetime="2018-08-26T23:18:25+08:00">2018-08-26</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-05-06 20:57:49" itemprop="dateModified" datetime="2020-05-06T20:57:49+08:00">2020-05-06</time>
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>：博客搭建框架</li>
-<li><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>：Markdown写作工具</li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next</a>：Hexo主题</li>
-<li><a href="https://gitee.com/help/articles/4136" target="_blank" rel="noopener">码云搭建博客</a>：在码云上部署Hexo的官方介绍（目前要使用Pro才能支持自动部署了，所以弃用了）</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://mny459.gitee.io/mny459/posts/56560b6f/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="木乃伊459">
-      <meta itemprop="description" content="新的生活新的开始">
-      <meta itemprop="image" content="/mny459/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木乃伊">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/mny459/posts/56560b6f/" class="post-title-link" itemprop="url">SharedPreferences</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-11-01 16:10:34" itemprop="dateCreated datePublished" datetime="2017-11-01T16:10:34+08:00">2017-11-01</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-10 22:04:50" itemprop="dateModified" datetime="2019-04-10T22:04:50+08:00">2019-04-10</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/mny459/categories/Android基础/" itemprop="url" rel="index"><span itemprop="name">Android基础</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>SharedPreferences是一种轻型的数据存储方式，本质是基于XML文件存储key-value键值对数据。支持多种数据类型存储。通常用来存储一些简单的配置信息，常用于程序的偏好设置功能和记住密码功能。</p>
-<hr>
-<h2 id="将数据存储到SharedPreferences中-data-data-包名-shared-prefs中"><a href="#将数据存储到SharedPreferences中-data-data-包名-shared-prefs中" class="headerlink" title="将数据存储到SharedPreferences中(data/data/包名/shared_prefs中)"></a>将数据存储到<em>SharedPreferences</em>中(data/data/包名/shared_prefs中)</h2><ol>
-<li><p>获取<em>SharedPreferences</em>对象</p>
-<ul>
-<li><p>通过<em>Context</em> 类中的<code>getSharedPreferences()</code>方法获取。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*name：用于指定SharedPreferences文件的名称，如果指定的文件不存在则会创建一个；</span></span><br><span class="line"><span class="comment">*mode：用于指定操作模式MODE_PRIVATE，相当于传入0.</span></span><br><span class="line"><span class="comment">表示只有当前的应用程序才可以对这个SharedPrefrences文件进行读写；其他操作模式均已被废弃。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> SharedPreferences <span class="title">getSharedPreferences</span><span class="params">(String name,<span class="keyword">int</span> mode)</span></span>;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ol>
-<pre><code>- 通过_Activity_类中的`getPreferences()`方法获取。使用这个方法时会将当前活动的类名作为SharedPreferences的文件名。
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">	 <span class="function"><span class="keyword">public</span> SharedPreferences <span class="title">getPreferences</span><span class="params">(<span class="keyword">int</span> mode)</span> </span>&#123;</span><br><span class="line">	 		<span class="keyword">return</span> <span class="keyword">super</span>.getPreferences(mode);</span><br><span class="line">	&#125;</span><br><span class="line">	```	</span><br><span class="line"></span><br><span class="line">	- 通过_PreferencesManager_类中的静态方法`getSharedPreferences()`方法获取。该方法接受一个Context参数，并自动使用当前应用程序的的包名作为前缀来命名SharedPreferences文件。</span><br><span class="line">	</span><br><span class="line"><span class="number">2</span>. 调用_SharedPreferences_对象的`edit()`方法来获取一个_SharedPreferences.Editor_对象。（因为_SharedPreferences_是一个接口。）</span><br><span class="line"><span class="number">3</span>. 调用`putxxx()` 向_SharedPreferences.Editor_对象中添加数据</span><br><span class="line"><span class="number">4</span>. 调用`apply()`（最好不使用`commit()`）将添加的数据提交，完成数据存储操作。</span><br><span class="line"><span class="number">5</span>. 示例代码：</span><br><span class="line"></span><br><span class="line">	```java</span><br><span class="line">	SharedPreferences.Editor editor = getSharedPreferences(<span class="string">"data"</span>,MODE_PRIVATE).edit();<span class="comment">//获取SharedPreferences.Editor对象</span></span><br><span class="line">	editor.putString(<span class="string">"name"</span>, <span class="string">"Tom"</span>);<span class="comment">//添加数据</span></span><br><span class="line">	editor.putInt(<span class="string">"age"</span>, <span class="number">18</span>);</span><br><span class="line">	editor.putBoolean(<span class="string">"married"</span>, <span class="keyword">false</span>);</span><br><span class="line">	</span><br><span class="line">	editor.commit();<span class="comment">//提交数据</span></span><br><span class="line">	</span><br><span class="line">	editor.remove(<span class="string">"age"</span>);</span><br><span class="line">	editor.commit();<span class="comment">//如移除后还需再提交一次</span></span><br></pre></td></tr></table></figure>
-</code></pre><hr>
-<h2 id="从SharedPreferences中读取数据"><a href="#从SharedPreferences中读取数据" class="headerlink" title="从SharedPreferences中读取数据"></a>从<em>SharedPreferences</em>中读取数据</h2><p>SharedPreferences对象中提供了了一系列<code>getxxx()</code>方法用于对存储的数据进行读取，每种get方法都对应了SharedPreferences.Editor对象的一种<code>putxxx()</code>方法。<code>getxxx()</code>的第一个参数为键，第二个参数为默认值。示例代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SharedPreferences sp = getSharedPreferences(<span class="string">"data"</span>,MODE_PRIVATE);</span><br><span class="line"></span><br><span class="line">String name = sp.getString(<span class="string">"name"</span>, <span class="string">""</span>);</span><br><span class="line"><span class="keyword">int</span> aget = sp.getInt(<span class="string">"age"</span>, <span class="number">0</span>);</span><br><span class="line"><span class="keyword">boolean</span> married = sp.getBoolean(<span class="string">"married"</span>, <span class="keyword">false</span>);</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -897,10 +387,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/mny459/posts/d7440f2f/" class="post-title-link" itemprop="url">JAVA 网络编程之Socket</a>
+          <h1 class="post-title" itemprop="name headline">JAVA 网络编程之Socket
+
               
             
           </h1>
@@ -976,9 +464,7 @@
       
 
       
-        
-          
-            <p>#1. 网络基础知识</p>
+        <p>#1. 网络基础知识</p>
 <ol>
 <li>IP地址：每台计算机的唯一标示，类似于手机号码。目前使用较多的是IPv4,定义了IP地址的长度为32位的二进制。</li>
 <li>协议：TCP/IP是目前世界上应用最为广泛的协议；是以TCP和IP为基础的不同层次上多个协议的集合 。<ul>
@@ -1095,8 +581,6 @@
 <li>传递文件<br><img src="./Screenshot_2016-08-12-11-59-19.png" alt="Alt text"></li>
 </ol>
 
-          
-        
       
     </div>
 
@@ -1117,177 +601,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://mny459.gitee.io/mny459/posts/21846/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="木乃伊459">
-      <meta itemprop="description" content="新的生活新的开始">
-      <meta itemprop="image" content="/mny459/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="木乃伊">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/mny459/posts/21846/" class="post-title-link" itemprop="url">用这些写一个Android App吧</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2017-07-23 21:05:41" itemprop="dateCreated datePublished" datetime="2017-07-23T21:05:41+08:00">2017-07-23</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-04-10 21:53:51" itemprop="dateModified" datetime="2019-04-10T21:53:51+08:00">2019-04-10</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/mny459/tags/JAVA网络/" rel="tag"># JAVA网络</a>
           
-            
-            
+            <a href="/mny459/tags/Socket/" rel="tag"># Socket</a>
           
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h2 id="基础框架"><a href="#基础框架" class="headerlink" title="基础框架"></a>基础框架</h2><h4 id="Fragment"><a href="#Fragment" class="headerlink" title="Fragment"></a>Fragment</h4><ol>
-<li><a href="https://github.com/YoKeyword/Fragmentation" target="_blank" rel="noopener">Fragmentation</a></li>
-</ol>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/mny459/posts/21846/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/mny459/posts/21846/" rel="next" title="用这些写一个Android App吧">
+                <i class="fa fa-chevron-left"></i> 用这些写一个Android App吧
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
+            
+          </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/mny459/posts/56560b6f/" rel="prev" title="SharedPreferences">
+                SharedPreferences <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1297,18 +646,15 @@
   </article>
 
 
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/mny459/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/mny459/">1</a><span class="page-number current">2</span>
-  </nav>
-
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1607,6 +953,10 @@
 
 
   
+  <script src="/mny459/js/src/scrollspy.js?v=6.7.0"></script>
+<script src="/mny459/js/src/post-details.js?v=6.7.0"></script>
+
+
 
   
 
@@ -1617,6 +967,8 @@
 
   
 
+
+  
 
 
   
