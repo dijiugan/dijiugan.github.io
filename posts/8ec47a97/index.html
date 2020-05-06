@@ -96,24 +96,24 @@
 
 
 
-  <meta name="description" content="新的生活新的开始">
-<meta property="og:type" content="website">
-<meta property="og:title" content="分类">
-<meta property="og:url" content="https://mny459.gitee.io/categories/index.html">
+  <meta name="description" content="什么是跳表？为链表建立多级索引的数据结构就称为跳表。 跳表的时间复杂度？ 计算跳表的高度如果链表有n个节点，每2个节点抽取抽出一个节点作为上一级索引的节点，那第1级索引的节点个数大约是n/2，第2级索引的节点个数大约是n/4，依次类推，第k级索引的节点个数就是n/(2^k)。假设索引有h级别，最高级的索引有2个节点，则有n/(2^h)=2，得出h=log2n-1，包含原始链表这一层，整个跳表的高度">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法--跳表">
+<meta property="og:url" content="https://mny459.gitee.io/posts/8ec47a97/index.html">
 <meta property="og:site_name" content="木乃伊">
-<meta property="og:description" content="新的生活新的开始">
+<meta property="og:description" content="什么是跳表？为链表建立多级索引的数据结构就称为跳表。 跳表的时间复杂度？ 计算跳表的高度如果链表有n个节点，每2个节点抽取抽出一个节点作为上一级索引的节点，那第1级索引的节点个数大约是n/2，第2级索引的节点个数大约是n/4，依次类推，第k级索引的节点个数就是n/(2^k)。假设索引有h级别，最高级的索引有2个节点，则有n/(2^h)=2，得出h=log2n-1，包含原始链表这一层，整个跳表的高度">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-12-24T15:16:11.720Z">
+<meta property="og:updated_time" content="2019-04-10T14:04:50.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="新的生活新的开始">
+<meta name="twitter:title" content="数据结构与算法--跳表">
+<meta name="twitter:description" content="什么是跳表？为链表建立多级索引的数据结构就称为跳表。 跳表的时间复杂度？ 计算跳表的高度如果链表有n个节点，每2个节点抽取抽出一个节点作为上一级索引的节点，那第1级索引的节点个数大约是n/2，第2级索引的节点个数大约是n/4，依次类推，第k级索引的节点个数就是n/(2^k)。假设索引有h级别，最高级的索引有2个节点，则有n/(2^h)=2，得出h=log2n-1，包含原始链表这一层，整个跳表的高度">
 
 
 
 
 
 
-  <link rel="canonical" href="https://mny459.gitee.io/categories/">
+  <link rel="canonical" href="https://mny459.gitee.io/posts/8ec47a97/">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>分类 | 木乃伊</title>
+  <title>数据结构与算法--跳表 | 木乃伊</title>
   
 
 
@@ -264,7 +264,7 @@
         
         
           
-          <li class="menu-item menu-item-categories menu-item-active">
+          <li class="menu-item menu-item-categories">
 
     
     
@@ -340,111 +340,187 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://mny459.gitee.io/mny459/posts/8ec47a97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="木乃伊459">
+      <meta itemprop="description" content="新的生活新的开始">
+      <meta itemprop="image" content="/mny459/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="木乃伊">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">分类
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
+          <h1 class="post-title" itemprop="name headline">数据结构与算法--跳表
+
               
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-              
-                
-              
-              目前共计 2 个分类
-            </div>
-            <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/mny459/categories/Android基础/">Android基础</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/mny459/categories/数据结构/">数据结构</a><span class="category-list-count">1</span></li></ul>
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-20 15:26:01" itemprop="dateCreated datePublished" datetime="2019-03-20T15:26:01+08:00">2019-03-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-10 22:04:50" itemprop="dateModified" datetime="2019-04-10T22:04:50+08:00">2019-04-10</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="什么是跳表？"><a href="#什么是跳表？" class="headerlink" title="什么是跳表？"></a>什么是跳表？</h2><p>为链表建立多级索引的数据结构就称为跳表。</p>
+<h2 id="跳表的时间复杂度？"><a href="#跳表的时间复杂度？" class="headerlink" title="跳表的时间复杂度？"></a>跳表的时间复杂度？</h2><ol>
+<li>计算跳表的高度<br>如果链表有n个节点，每2个节点抽取抽出一个节点作为上一级索引的节点，那第1级索引的节点个数大约是n/2，第2级索引的节点个数大约是n/4，依次类推，第k级索引的节点个数就是n/(2^k)。假设索引有h级别，最高级的索引有2个节点，则有n/(2^h)=2，得出h=log2n-1，包含原始链表这一层，整个跳表的高度就是log2n。</li>
+<li>计算跳表的时间复杂度<br>假设我们在跳表中查询某个数据的时候，如果每一层都遍历m个节点，那在跳表中查询一个数据的时间复杂度就是O(m*logn)。那这个m是多少呢？如下图所示，假设我们要查找的数据是x，在第k级索引中，我们遍历到y节点之后，发现x大于y，小于后面的节点z，所以我们通过y的down指针，从第k级下降到第k-1级索引。在第k-1级索引中，y和z之间只有3个节点（包含y和z），所以，我们在k-1级索引中最多只需要遍历3个节点，以此类推，每一级索引都最多只需要遍历3个节点。所以m=3。因此在跳表中查询某个数据的时间复杂度就是O(logn)。<h2 id="跳表的空间复杂度及如何优化？"><a href="#跳表的空间复杂度及如何优化？" class="headerlink" title="跳表的空间复杂度及如何优化？"></a>跳表的空间复杂度及如何优化？</h2></li>
+<li>计算索引的节点总数<br>如果链表有n个节点，每2个节点抽取抽出一个节点作为上一级索引的节点，那每一级索引的节点数分别为：n/2，n/4，n/8，…，8，4，2，等比数列求和n-1，所以跳表的空间复杂度为O(n)。</li>
+<li>如何优化时间复杂度<br>如果链表有n个节点，每3或5个节点抽取抽出一个节点作为上一级索引的节点，那每一级索引的节点数分别为（以3为例）：n/3，n/9，n/27，…，27，9，3，1，等比数列求和n/2，所以跳表的空间复杂度为O(n)，和每2个节点抽取一次相比，时间复杂度要低不少呢。</li>
+</ol>
+<h2 id="高效的动态插入和删除？"><a href="#高效的动态插入和删除？" class="headerlink" title="高效的动态插入和删除？"></a>高效的动态插入和删除？</h2><p>跳表本质上就是链表，所以仅插作，插入和删除操时间复杂度就为O(1)，但在实际情况中，要插入或删除某个节点，需要先查找到指定位置，而这个查找操作比较费时，但在跳表中这个查找操作的时间复杂度是O(logn)，所以，跳表的插入和删除操作的是时间复杂度也是O(logn)。</p>
+<h2 id="跳表索引动态更新？"><a href="#跳表索引动态更新？" class="headerlink" title="跳表索引动态更新？"></a>跳表索引动态更新？</h2><p>当往跳表中插入数据的时候，可以选择同时将这个数据插入到部分索引层中，那么如何选择这个索引层呢？可以通过随机函数来决定将这个节点插入到哪几级索引中，比如随机函数生成了值K，那就可以把这个节点添加到第1级到第K级索引中。</p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/mny459/posts/e26b303c/" rel="next" title="栈--数据结构与算法">
+                <i class="fa fa-chevron-left"></i> 栈--数据结构与算法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/mny459/posts/4a6c537d/" rel="prev" title="数据结构与算法--散列表">
+                数据结构与算法--散列表 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -474,8 +550,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -617,6 +702,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是跳表？"><span class="nav-number">1.</span> <span class="nav-text">什么是跳表？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳表的时间复杂度？"><span class="nav-number">2.</span> <span class="nav-text">跳表的时间复杂度？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳表的空间复杂度及如何优化？"><span class="nav-number">3.</span> <span class="nav-text">跳表的空间复杂度及如何优化？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高效的动态插入和删除？"><span class="nav-number">4.</span> <span class="nav-text">高效的动态插入和删除？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#跳表索引动态更新？"><span class="nav-number">5.</span> <span class="nav-text">跳表索引动态更新？</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       

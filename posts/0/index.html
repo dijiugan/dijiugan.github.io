@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="Gradle 是一种构建工具Groovy 是一种语言Gradle 使用 Groovy 创建了 DSL">
+  <meta name="description" content="{&quot;compress&quot;:true,&quot;commitItems&quot;:[[&quot;7951cbbd-3392-41e4-8ece-a4dab8aba2cc&quot;,1529292802747,&quot;Android基础知识之_SharedPreferences_存储\n\n\t\n# 简介\nSharedPreferences是一种轻型的数据存储方式，本质是基于XML文件存储key-value键值对数据。支持多种数据类型存">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Gradle 学习笔记">
+<meta property="og:title" content="木乃伊">
 <meta property="og:url" content="https://mny459.gitee.io/posts/0/index.html">
 <meta property="og:site_name" content="木乃伊">
-<meta property="og:description" content="Gradle 是一种构建工具Groovy 是一种语言Gradle 使用 Groovy 创建了 DSL">
+<meta property="og:description" content="{&quot;compress&quot;:true,&quot;commitItems&quot;:[[&quot;7951cbbd-3392-41e4-8ece-a4dab8aba2cc&quot;,1529292802747,&quot;Android基础知识之_SharedPreferences_存储\n\n\t\n# 简介\nSharedPreferences是一种轻型的数据存储方式，本质是基于XML文件存储key-value键值对数据。支持多种数据类型存">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-04-07T09:27:20.790Z">
+<meta property="og:updated_time" content="2019-04-10T14:04:50.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Gradle 学习笔记">
-<meta name="twitter:description" content="Gradle 是一种构建工具Groovy 是一种语言Gradle 使用 Groovy 创建了 DSL">
+<meta name="twitter:title" content="木乃伊">
+<meta name="twitter:description" content="{&quot;compress&quot;:true,&quot;commitItems&quot;:[[&quot;7951cbbd-3392-41e4-8ece-a4dab8aba2cc&quot;,1529292802747,&quot;Android基础知识之_SharedPreferences_存储\n\n\t\n# 简介\nSharedPreferences是一种轻型的数据存储方式，本质是基于XML文件存储key-value键值对数据。支持多种数据类型存">
 
 
 
@@ -123,7 +123,7 @@
   };
 </script>
 
-  <title>Gradle 学习笔记 | 木乃伊</title>
+  <title> | 木乃伊</title>
   
 
 
@@ -377,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Gradle 学习笔记
+          <h1 class="post-title" itemprop="name headline">
 
               
             
@@ -403,12 +403,24 @@
                 
               
 
-              <time title="创建时间：2020-04-07 17:22:36 / 修改时间：17:27:20" itemprop="dateCreated datePublished" datetime="2020-04-07T17:22:36+08:00">2020-04-07</time>
+              <time title="创建时间：2018-08-08 08:51:49" itemprop="dateCreated datePublished" datetime="2018-08-08T08:51:49+08:00">2018-08-08</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-10 22:04:50" itemprop="dateModified" datetime="2019-04-10T22:04:50+08:00">2019-04-10</time>
               
             
           </span>
@@ -442,49 +454,7 @@
       
 
       
-        <p>Gradle 是一种构建工具<br>Groovy 是一种语言<br>Gradle 使用 Groovy 创建了 DSL</p>
-<a id="more"></a>
-<ol>
-<li><p>配置文件拆解</p>
-</li>
-<li><p>xxx/src/main 下的文件会被所有的模式加载<br>可以在 src 下 创建 debug 和 release 文件夹，来区分 Debug 和 Release<br>buildTypes 下的编译模式 可以和 src 下的 文件夹名字自动关联</p>
-</li>
-<li><p>methodMissing 机制</p>
-</li>
-<li><p>productFlavors（产品的风味调料）</p>
-</li>
-</ol>
-<ul>
-<li>可以用来做不同渠道版本（应用商店）<br>-</li>
-</ul>
-<p><code>flavorDimensions</code>：渠道纬度，可以有很多值，”,”分隔<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flavorDimensions: &apos;price&apos;,&apos;nation&apos;</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>引入<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">implementation // 不会进行传递依赖</span><br><span class="line">api // 会进行传递依赖</span><br><span class="line">compile // 会进行传递依赖，但是被废弃了</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>传递依赖的缺点：有可能会让程序编译变慢</p>
-<blockquote>
-<p>A 依赖 B，那么 B 的改变会导致 A 的重新编译，所以依赖传递会导致 A 依赖 B，B依赖 C 时，C 的改变会导致 A 和 B 都重新编译，<br>而不进行依赖传递，则 C 的改变仅仅会导致 B 的重新编译，不会导致 A 的重新编译</p>
-</blockquote>
-<p>implementation 可以加入 buildTypes 名字的前缀来区别不同的 buildType 引入不同的库，比如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">debugImplementation</span><br><span class="line">releaseImplementation</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li>gradleWrapper<br>组成：项目中的 gradle 文件夹 gradlew(linux、unix 使用) gradlew.bat(Windows 使用) 文件</li>
-</ol>
-<p>在系统级上不安装 gradle 也可以执行 gradle 命令<br>mac<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x ./gradlew</span><br><span class="line">./gradlew -v</span><br></pre></td></tr></table></figure></p>
-<ol>
-<li><p>Task</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// task 关键字 task 的关键字总会被执行 type: Delete 的意思是在执行 clean 前，先执行 Delete</span><br><span class="line">task clean(type: Delete) &#123;</span><br><span class="line">    println &quot;before!!!&quot;</span><br><span class="line">    //Configure 阶段执行 配置，家需要删除的文件添加到集合，真的删除会在 执行task 的时候执行</span><br><span class="line">    delete rootProject.buildDir</span><br><span class="line">    println &quot;after!!!&quot;</span><br><span class="line">    // doLast doFirst 只有在 task 执行的时候执行 Task 阶段</span><br><span class="line">    doLast&#123;</span><br><span class="line">        print &quot;last&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">// delete 实际的操作</span><br><span class="line">public Delete delete(Object... targets) &#123;</span><br><span class="line">    for (Object target : targets) &#123;</span><br><span class="line">        this.delete.add(target);</span><br><span class="line">    &#125;</span><br><span class="line">    return this;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>afterEvaluate</p>
-</li>
-<li><p>Gradle 生命周期<br>初始化 在 settings.gradle 中寻找有哪些 project module<br>在 build.gradle 配置所有的 project module<br>执行 task</p>
-</li>
-<li><p>plugin<br>使用 <code>apply plugin: &#39;plugin name&#39;</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply plugin: &apos;com.android.application&apos;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>自己写的关键点<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">buildSrc 目录 会在一开始被自动执行</span><br><span class="line">groovy</span><br><span class="line">resources/META-INF/gradle-plugins 目录xxx.properties</span><br><span class="line">implementation-class=类名 // 指定 plugin 的类文件</span><br><span class="line">implements Plugin&lt;Project&gt;</span><br><span class="line">project.extensions.create</span><br><span class="line"></span><br><span class="line">11. Transform 修改字节码</span><br></pre></td></tr></table></figure></p>
-
+        {"compress":true,"commitItems":[["7951cbbd-3392-41e4-8ece-a4dab8aba2cc",1529292802747,"Android基础知识之_SharedPreferences_存储\n\n\t\n# 简介\nSharedPreferences是一种轻型的数据存储方式，本质是基于XML文件存储key-value键值对数据。支持多种数据类型存储。通常用来存储一些简单的配置信息，常用于程序的偏好设置功能和记住密码功能。\n\t\n---\n# 将数据存储到_SharedPreferences_中(data/data/包名/shared_prefs中)\n\n1. 获取_SharedPreferences_对象\n\t- 通过_Context_ 类中的`getSharedPreferences()`方法获取。\n\n\t```java\n\t/*name：用于指定SharedPreferences文件的名称，如果指定的文件不存在则会创建一个；\n\t*mode：用于指定操作模式MODE_PRIVATE，相当于传入0.\n\t表示只有当前的应用程序才可以对这个SharedPrefrences文件进行读写；其他操作模式均已被废弃。\n\t*/\n\tpublic abstract SharedPreferences getSharedPreferences(String name,int mode);\n\t```\n\t\n\t- 通过_Activity_类中的`getPreferences()`方法获取。使用这个方法时会将当前活动的类名作为SharedPreferences的文件名。\n\n\t```java\n\t public SharedPreferences getPreferences(int mode) {\n\t \t\treturn super.getPreferences(mode);\n\t}\n\t```\t\n\n\t- 通过_PreferencesManager_类中的静态方法`getSharedPreferences()`方法获取。该方法接受一个Context参数，并自动使用当前应用程序的的包名作为前缀来命名SharedPreferences文件。\n\t\n2. 调用_SharedPreferences_对象的`edit()`方法来获取一个_SharedPreferences.Editor_对象。（因为_SharedPreferences_是一个接口。）\n3. 调用`putxxx()` 向_SharedPreferences.Editor_对象中添加数据\n4. 调用`apply()`（最好不使用`commit()`）将添加的数据提交，完成数据存储操作。\n5. 示例代码：\n\n\t```java\n\tSharedPreferences.Editor editor = getSharedPreferences(\"data\",MODE_PRIVATE).edit();//获取SharedPreferences.Editor对象\n\teditor.putString(\"name\", \"Tom\");//添加数据\n\teditor.putInt(\"age\", 18);\n\teditor.putBoolean(\"married\", false);\n\t\n\teditor.commit();//提交数据\n\t\n\teditor.remove(\"age\");\n\teditor.commit();//如移除后还需再提交一次\n\t```\n\n---\n\n# 从_SharedPreferences_中读取数据\nSharedPreferences对象中提供了了一系列`getxxx()`方法用于对存储的数据进行读取，每种get方法都对应了SharedPreferences.Editor对象的一种`putxxx()`方法。`getxxx()`的第一个参数为键，第二个参数为默认值。示例代码\n\n```java\nSharedPreferences sp = getSharedPreferences(\"data\",MODE_PRIVATE);\n\nString name = sp.getString(\"name\", \"\");\nint aget = sp.getInt(\"age\", 0);\nboolean married = sp.getBoolean(\"married\", false);\n```\n",[[1529292800630,["dijiugan@munaiyi.local",[[1,38,"@"]],[38,38],[39,39]]],[1529292802113,["dijiugan@munaiyi.local",[[-1,38,"@"]],[39,39],[38,38]]],[1529292802774,["dijiugan@munaiyi.local",[[1,38,"#"]],[38,38],[39,39]]],[1529292804568,["dijiugan@munaiyi.local",[[1,155,"#"]],[155,155],[156,156]]],[1529292810057,["dijiugan@munaiyi.local",[[1,153,"--"]],[153,153],[155,155]]],[1529292816406,["dijiugan@munaiyi.local",[[1,1386,"#"]],[1386,1386],[1387,1387]]],[1529292817945,["dijiugan@munaiyi.local",[[1,1383,"--"]],[1383,1383],[1385,1385]]]]],["59c05468-3e59-42ad-8213-1d6c4d9d2189",1529292964156,"Android基础知识之_SharedPreferences_存储\n\n\t\n## 简介\nSharedPreferences是一种轻型的数据存储方式，本质是基于XML文件存储key-value键值对数据。支持多种数据类型存储。通常用来存储一些简单的配置信息，常用于程序的偏好设置功能和记住密码功能。\n\t\n-----\n## 将数据存储到_SharedPreferences_中(data/data/包名/shared_prefs中)\n\n1. 获取_SharedPreferences_对象\n\t- 通过_Context_ 类中的`getSharedPreferences()`方法获取。\n\n\t```java\n\t/*name：用于指定SharedPreferences文件的名称，如果指定的文件不存在则会创建一个；\n\t*mode：用于指定操作模式MODE_PRIVATE，相当于传入0.\n\t表示只有当前的应用程序才可以对这个SharedPrefrences文件进行读写；其他操作模式均已被废弃。\n\t*/\n\tpublic abstract SharedPreferences getSharedPreferences(String name,int mode);\n\t```\n\t\n\t- 通过_Activity_类中的`getPreferences()`方法获取。使用这个方法时会将当前活动的类名作为SharedPreferences的文件名。\n\n\t```java\n\t public SharedPreferences getPreferences(int mode) {\n\t \t\treturn super.getPreferences(mode);\n\t}\n\t```\t\n\n\t- 通过_PreferencesManager_类中的静态方法`getSharedPreferences()`方法获取。该方法接受一个Context参数，并自动使用当前应用程序的的包名作为前缀来命名SharedPreferences文件。\n\t\n2. 调用_SharedPreferences_对象的`edit()`方法来获取一个_SharedPreferences.Editor_对象。（因为_SharedPreferences_是一个接口。）\n3. 调用`putxxx()` 向_SharedPreferences.Editor_对象中添加数据\n4. 调用`apply()`（最好不使用`commit()`）将添加的数据提交，完成数据存储操作。\n5. 示例代码：\n\n\t```java\n\tSharedPreferences.Editor editor = getSharedPreferences(\"data\",MODE_PRIVATE).edit();//获取SharedPreferences.Editor对象\n\teditor.putString(\"name\", \"Tom\");//添加数据\n\teditor.putInt(\"age\", 18);\n\teditor.putBoolean(\"married\", false);\n\t\n\teditor.commit();//提交数据\n\t\n\teditor.remove(\"age\");\n\teditor.commit();//如移除后还需再提交一次\n\t```\n\n-----\n\n## 从_SharedPreferences_中读取数据\nSharedPreferences对象中提供了了一系列`getxxx()`方法用于对存储的数据进行读取，每种get方法都对应了SharedPreferences.Editor对象的一种`putxxx()`方法。`getxxx()`的第一个参数为键，第二个参数为默认值。示例代码\n\n```java\nSharedPreferences sp = getSharedPreferences(\"data\",MODE_PRIVATE);\n\nString name = sp.getString(\"name\", \"\");\nint aget = sp.getInt(\"age\", 0);\nboolean married = sp.getBoolean(\"married\", false);\n```\n",[[1529292933482,["dijiugan@munaiyi.local",[[1,0,"\n"]],[0,0],[1,1]]],[1529292934710,["dijiugan@munaiyi.local",[[1,0,"---\nlayout: post\ntitle: \"旁门左道\"修炼手册\ncategories: \n - 旁门左道\ntags:\n - 旁门左道\n\n---"]],[0,0],[74,74]]],[1529292938278,["dijiugan@munaiyi.local",[[-1,75,"Android基础知识之_SharedPreferences_存储"]],[75,108],[75,75]]],[1529292941361,["dijiugan@munaiyi.local",[[-1,24,"\"旁门左道\"修炼手册"],[1,34,"Android基础知识之_SharedPreferences_存储"]],[24,34],[57,57]]],[1529292944310,["dijiugan@munaiyi.local",[[-1,23," Android基础"]],[23,33],[23,23]]],[1529292946156,["dijiugan@munaiyi.local",[[-1,64,"旁门左道"],[1,68," Android基础"]],[64,68],[74,74]]],[1529292948426,["dijiugan@munaiyi.local",[[-1,84,"旁门左道"],[1,88," Android基础"]],[84,88],[94,94]]],[1529292951773,["dijiugan@munaiyi.local",[[-1,27,"SharedPreferences"]],[27,44],[27,27]]],[1529292955454,["dijiugan@munaiyi.local",[[-1,68,"Android基础"],[1,77,"SharedPreferences"]],[68,77],[85,85]]],[1529292959561,["dijiugan@munaiyi.local",[[1,27,"SharedPreferences"]],[27,27],[44,44]]],[1529292995840,["dijiugan@munaiyi.local",[[1,0,"\n"]],[0,0],[1,1]]],[1529292997428,["dijiugan@munaiyi.local",[[1,0,"---\nlayout: post\ntitle: 我的目标与参考体系\ncategories: \n - 我的目标与参考体系\ntags: \n - 我的目标与参考体系\n\n---"]],[0,0],[84,84]]],[1529293002196,["dijiugan@munaiyi.local",[[-1,108,"知识之_SharedPreferences_存储"]],[108,132],[108,108]]],[1529293004348,["dijiugan@munaiyi.local",[[-1,24,"我的目标与参考体系\ncategories: "],[1,46,"知识之_SharedPreferences_存储"]],[24,46],[48,48]]],[1529293008706,["dijiugan@munaiyi.local",[[-1,23," 知识之_"]],[28,28],[23,23]]],[1529293010078,["dijiugan@munaiyi.local",[[1,23," "]],[23,23],[24,24]]],[1529293011278,["dijiugan@munaiyi.local",[[-1,41,"_存储"]],[44,44],[41,41]]],[1529293017957,["dijiugan@munaiyi.local",[[-1,104,"categories: \n -  Android基础\ntags:\n -  SharedPreferences"]],[104,158],[104,104]]],[1529293021271,["dijiugan@munaiyi.local",[[1,42,"categories: \n"],[-1,45,"我的目标与参考体系"],[1,54," Android基础"],[-1,60," "],[-1,65,"我的目标与参考体系"],[1,74," SharedPreferences"]],[42,74],[96,96]]],[1529293023793,["dijiugan@munaiyi.local",[[1,41," "]],[41,41],[42,42]]],[1529293027863,["dijiugan@munaiyi.local",[[-1,103,"---\nlayout: post\ntitle:\n\n\n---"]],[103,132],[103,103]]],[1529293028429,["dijiugan@munaiyi.local",[[-1,105,"\n"]],[103,103],[102,102]]],[1529293030044,["dijiugan@munaiyi.local",[[-1,104,"\n"]],[104,104],[103,103]]],[1529293031107,["dijiugan@munaiyi.local",[[-1,103,"\n"]],[104,104],[103,103]]],[1529293031602,["dijiugan@munaiyi.local",[[-1,102,"\n"]],[103,103],[102,102]]],[1529293033092,["dijiugan@munaiyi.local",[[1,102,"\n"]],[102,102],[103,103]]]]]]}
       
     </div>
 
@@ -514,8 +484,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/mny459/posts/a1a48993/" rel="next" title="数据结构与算法-队列">
-                <i class="fa fa-chevron-left"></i> 数据结构与算法-队列
+              <a href="/mny459/posts/56560b6f/" rel="next" title="SharedPreferences">
+                <i class="fa fa-chevron-left"></i> SharedPreferences
               </a>
             
           </div>
@@ -523,6 +493,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/mny459/posts/63601/" rel="prev" title="写作工具">
+                写作工具 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -583,7 +557,7 @@
                 
                   <a href="/mny459/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">13</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -618,7 +592,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">0</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -685,7 +659,7 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -96,25 +96,24 @@
 
 
 
-  <meta name="description" content="Hexo：博客搭建框架 Typora：Markdown写作工具 Next：Hexo主题 码云搭建博客：在码云上部署Hexo的官方介绍">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="问题 如何用链表实现LRU缓存淘汰算法?  缓存常见的缓存淘汰策略有三种：  先进先出策略 FIFO（First In，First Out） 最少使用策略 LFU（Least Frequently Used） 最近最少使用策略 LRU（Least Recently Used）  对于执行较慢的程序，可以通过消耗更多的内存（空间换时间）来进行优化；而消耗过多内存的程序，可以通过消耗更多的时间（时间换">
 <meta property="og:type" content="article">
-<meta property="og:title" content="写作工具">
-<meta property="og:url" content="https://mny459.gitee.io/posts/63601/index.html">
+<meta property="og:title" content="链表--数据结构与算法">
+<meta property="og:url" content="https://mny459.gitee.io/posts/369ee84b/index.html">
 <meta property="og:site_name" content="木乃伊">
-<meta property="og:description" content="Hexo：博客搭建框架 Typora：Markdown写作工具 Next：Hexo主题 码云搭建博客：在码云上部署Hexo的官方介绍">
+<meta property="og:description" content="问题 如何用链表实现LRU缓存淘汰算法?  缓存常见的缓存淘汰策略有三种：  先进先出策略 FIFO（First In，First Out） 最少使用策略 LFU（Least Frequently Used） 最近最少使用策略 LRU（Least Recently Used）  对于执行较慢的程序，可以通过消耗更多的内存（空间换时间）来进行优化；而消耗过多内存的程序，可以通过消耗更多的时间（时间换">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-10T14:02:01.802Z">
+<meta property="og:updated_time" content="2019-04-11T02:33:21.668Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="写作工具">
-<meta name="twitter:description" content="Hexo：博客搭建框架 Typora：Markdown写作工具 Next：Hexo主题 码云搭建博客：在码云上部署Hexo的官方介绍">
+<meta name="twitter:title" content="链表--数据结构与算法">
+<meta name="twitter:description" content="问题 如何用链表实现LRU缓存淘汰算法?  缓存常见的缓存淘汰策略有三种：  先进先出策略 FIFO（First In，First Out） 最少使用策略 LFU（Least Frequently Used） 最近最少使用策略 LRU（Least Recently Used）  对于执行较慢的程序，可以通过消耗更多的内存（空间换时间）来进行优化；而消耗过多内存的程序，可以通过消耗更多的时间（时间换">
 
 
 
 
 
 
-  <link rel="canonical" href="https://mny459.gitee.io/posts/63601/">
+  <link rel="canonical" href="https://mny459.gitee.io/posts/369ee84b/">
 
 
 
@@ -124,7 +123,7 @@
   };
 </script>
 
-  <title>写作工具 | 木乃伊</title>
+  <title>链表--数据结构与算法 | 木乃伊</title>
   
 
 
@@ -361,7 +360,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://mny459.gitee.io/mny459/posts/63601/">
+    <link itemprop="mainEntityOfPage" href="https://mny459.gitee.io/mny459/posts/369ee84b/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="木乃伊459">
@@ -378,7 +377,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">写作工具
+          <h1 class="post-title" itemprop="name headline">链表--数据结构与算法
 
               
             
@@ -404,7 +403,7 @@
                 
               
 
-              <time title="创建时间：2018-08-26 23:18:25" itemprop="dateCreated datePublished" datetime="2018-08-26T23:18:25+08:00">2018-08-26</time>
+              <time title="创建时间：2019-03-04 10:45:38" itemprop="dateCreated datePublished" datetime="2019-03-04T10:45:38+08:00">2019-03-04</time>
             
 
             
@@ -421,7 +420,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-10 22:02:01" itemprop="dateModified" datetime="2019-04-10T22:02:01+08:00">2019-04-10</time>
+                <time title="修改时间：2019-04-11 10:33:21" itemprop="dateModified" datetime="2019-04-11T10:33:21+08:00">2019-04-11</time>
               
             
           </span>
@@ -455,13 +454,121 @@
       
 
       
-        <ol>
-<li><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo</a>：博客搭建框架</li>
-<li><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>：Markdown写作工具</li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="noopener">Next</a>：Hexo主题</li>
-<li><a href="https://gitee.com/help/articles/4136" target="_blank" rel="noopener">码云搭建博客</a>：在码云上部署Hexo的官方介绍</li>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+<p>如何用链表实现LRU缓存淘汰算法?</p>
+</blockquote>
+<h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><p>常见的缓存淘汰策略有三种：</p>
+<ul>
+<li>先进先出策略 FIFO（First In，First Out）</li>
+<li>最少使用策略 LFU（Least Frequently Used）</li>
+<li>最近最少使用策略 LRU（Least Recently Used）</li>
+</ul>
+<p>对于执行较慢的程序，可以通过消耗更多的内存（空间换时间）来进行优化；而消耗过多内存的程序，可以通过消耗更多的时间（时间换空间）来降低内存的消耗。</p>
+<h2 id="与数组对比"><a href="#与数组对比" class="headerlink" title="与数组对比"></a>与数组对比</h2><h3 id="复杂度对比"><a href="#复杂度对比" class="headerlink" title="复杂度对比"></a>复杂度对比</h3><table>
+<thead>
+<tr>
+<th style="text-align:center">时间复杂度</th>
+<th style="text-align:center">数组</th>
+<th style="text-align:center">链表</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">插入、删除</td>
+<td style="text-align:center">O(n)</td>
+<td style="text-align:center">O(1)</td>
+</tr>
+<tr>
+<td style="text-align:center">随机访问</td>
+<td style="text-align:center">O(1)</td>
+<td style="text-align:center">O(n)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="性能对比"><a href="#性能对比" class="headerlink" title="性能对比"></a>性能对比</h3><p>数组扩容耗内存，链表相对数组本身就耗内存</p>
+<h2 id="链表结构分类"><a href="#链表结构分类" class="headerlink" title="链表结构分类"></a>链表结构分类</h2><blockquote>
+<p>链表通过指针将一组零散的内存块串联在一起，该内存块被称为 <strong>节点</strong></p>
+</blockquote>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><p>每个节点由 <strong>数据(Data)</strong> 与 <strong>后继指针(Next)</strong> 构成。第一个节点称为头节点，最后一个节点称为尾节点。尾节点指向 <strong>空地址 NULL</strong>，表示这是最后一个节点。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">高效的插入、删除操作</td>
+<td>1. 时间复杂度为O(1)；2. 可是删除之前定位该节点需要先便利。所以实际时间复杂度为O(n)</td>
+</tr>
+<tr>
+<td style="text-align:center">低效的随机访问操作</td>
+<td>1. 时间复杂度为O(n)；2. 无法通过寻址公式计算出对应的内存地址，只能根据节点遍历找到对应的节点</td>
+</tr>
+</tbody>
+</table>
+<h3 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h3><p>一种特殊的单链表：尾节点指针指向头节点。</p>
+<blockquote>
+<p>约瑟夫问题</p>
+</blockquote>
+<h3 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h3><p>每个节点由 <strong>数据(Data)</strong>、 <strong>后继指针(Next)</strong> 与<strong>前驱指针(prev)</strong> 构成。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">特点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">比单链表更高效的插入、删除操作</td>
+<td>1. 相对于单链表，双链表在定位被删除的节点时可以直接获取前驱节点，可以真正的达到O(1)</td>
+</tr>
+<tr>
+<td style="text-align:center">比单链表更占内存</td>
+<td>增加了前驱指针，但是增加了逆向遍历</td>
+</tr>
+</tbody>
+</table>
+<p>双向链表比单链表的使用更加广泛，这就是 <strong>用空间换时间</strong> 的思想。</p>
+<h2 id="问题解答"><a href="#问题解答" class="headerlink" title="问题解答"></a>问题解答</h2><p>解答：时间复杂度为O(n)，具体思路如下</p>
+<blockquote>
+<p>我们维护一个有序单链表，越靠近链表尾部的结点是越早之前访问的。当有一个新的数据被访问时，我们从链表头开始顺序遍历链表。</p>
+<ol>
+<li>如果此数据之前已经被缓存在链表中了，我们遍历得到这个数据对应的结点，并将其从原来的位置删除，然后再插入到链表的头部。</li>
+<li>如果此数据没有在缓存链表中，又可以分为两种情况：<ul>
+<li>如果此时缓存未满，则将此结点直接插入到链表的头部；</li>
+<li>如果此时缓存已满，则链表尾结点删除，将新的数据结点插入链表的头部。</li>
+</ul>
+</li>
 </ol>
-
+</blockquote>
+<h2 id="思考TODO"><a href="#思考TODO" class="headerlink" title="思考TODO"></a>思考TODO</h2><ol>
+<li><p>使用散列表优化LRU</p>
+</li>
+<li><p>使用数组实现LRU</p>
+</li>
+<li><p>如果字符串时由单链表存储的，该如何判断是否时一个回文串？</p>
+</li>
+<li><p>实现单链表、循环链表、双向链表，支持增删操作</p>
+</li>
+<li><p>实现单链表反转</p>
+</li>
+<li><p>实现两个有序的链表合并为一个有序链表</p>
+</li>
+<li><p>实现求链表的中间结点</p>
+</li>
+<li><p>leetcode</p>
+<ul>
+<li><p><a href="https://leetcode-cn.com/linked-list-cycle/" target="_blank" rel="noopener">https://leetcode-cn.com/linked-list-cycle/</a></p>
+</li>
+<li><p><a href="https://leetcode-cn.com/merge-k-sorted-lists/" target="_blank" rel="noopener">https://leetcode-cn.com/merge-k-sorted-lists/</a></p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="写链表代码技巧"><a href="#写链表代码技巧" class="headerlink" title="写链表代码技巧"></a>写链表代码技巧</h2><h3 id="技巧一：理解指针或引用的含义"><a href="#技巧一：理解指针或引用的含义" class="headerlink" title="技巧一：理解指针或引用的含义"></a>技巧一：理解指针或引用的含义</h3>
       
     </div>
 
@@ -482,12 +589,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/mny459/tags/Hexo/" rel="tag"># Hexo</a>
-          
-        </div>
-      
 
       
       
@@ -497,8 +598,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/mny459/posts/0/" rel="next" title>
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/mny459/posts/94d31968/" rel="next" title="数据结构与算法--数组">
+                <i class="fa fa-chevron-left"></i> 数据结构与算法--数组
               </a>
             
           </div>
@@ -507,8 +608,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/mny459/posts/2d5d09c5/" rel="prev" title="值得关注的Github项目">
-                值得关注的Github项目 <i class="fa fa-chevron-right"></i>
+              <a href="/mny459/posts/e26b303c/" rel="prev" title="栈--数据结构与算法">
+                栈--数据结构与算法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -554,8 +655,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -697,6 +807,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存"><span class="nav-number">2.</span> <span class="nav-text">缓存</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#与数组对比"><span class="nav-number">3.</span> <span class="nav-text">与数组对比</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂度对比"><span class="nav-number">3.1.</span> <span class="nav-text">复杂度对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能对比"><span class="nav-number">3.2.</span> <span class="nav-text">性能对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链表结构分类"><span class="nav-number">4.</span> <span class="nav-text">链表结构分类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表"><span class="nav-number">4.1.</span> <span class="nav-text">单链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#循环链表"><span class="nav-number">4.2.</span> <span class="nav-text">循环链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双向链表"><span class="nav-number">4.3.</span> <span class="nav-text">双向链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题解答"><span class="nav-number">5.</span> <span class="nav-text">问题解答</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思考TODO"><span class="nav-number">6.</span> <span class="nav-text">思考TODO</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写链表代码技巧"><span class="nav-number">7.</span> <span class="nav-text">写链表代码技巧</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#技巧一：理解指针或引用的含义"><span class="nav-number">7.1.</span> <span class="nav-text">技巧一：理解指针或引用的含义</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
